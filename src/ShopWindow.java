@@ -62,7 +62,7 @@ public class ShopWindow extends JFrame implements ActionListener {
     private HashSet<String> associatedTextSet; // for menus and menu items
     private JMenu shopMenu, editMenu, shopItemMenu, customerMenu, reservationMenu, helpMenu;
     private   JButton itembtn,reservbtn;
-    private JTextField t1,t2,t3,t4;
+    private JTextField t1,t2,t3,t4,t5;
     public ShopItemReservation reserve;
     /**
      * Constructor for objects of class ReservationSystemWindow
@@ -76,6 +76,8 @@ reservbtn=new JButton();
         t2=new JTextField(10);
         t3=new JTextField(10);
         t4=new JTextField(10);
+        t5=new JTextField(100);
+        
         associatedTextSet = new HashSet<String>();
 
         initialiseWindow();
@@ -87,9 +89,8 @@ reservbtn=new JButton();
         setLocation(50, 50);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         contentPane = getContentPane();
-        contentPane.setBackground(Color.magenta);  // magenta so it is obvious if can see the background when "layout" not worked correctly !
+        contentPane.setBackground(Color.yellow);  // magenta so it is obvious if can see the background when "layout" not worked correctly !
         contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
-
         // this code, involving window adapter and window listener, is to ensure that if the
         // window is closed by using the "Close" icon at the top right hand corner of the
         // window then the "Exit" command is executed so that the system is closed down properly
@@ -101,8 +102,8 @@ reservbtn=new JButton();
             }
         };
         addWindowListener(windowListener);
-     
-      
+     t5.setText("WELCOME CHOOSE FROM THE MENU BAR WHAT YOU WANT TO DO");
+      add(t5);
                     itembtn.setText("add item");
                     reservbtn.setText("reserve item");
                     
@@ -110,6 +111,7 @@ reservbtn=new JButton();
                     t2.setText("item name");
                     t3.setText(currentShopName.toString());
                     t3.disable();
+                    
                         
   itembtn.addActionListener(this);
 
@@ -254,6 +256,7 @@ public void addItemV(){
         // reservation menu
         reservationMenu = setupMenu(menuBar, "Reservation", 'R');
         setupMenuItem(reservationMenu, "Make reservation...", "Make a reservation of a shop item for a customer", 'M', true);
+        setupMenuItem(reservationMenu, "Make Vehicle reservation...", "reserve vehicle", 'D', true);
 
         // help menu
         helpMenu = setupMenu(menuBar, "Help", 'H');
@@ -281,6 +284,7 @@ public void addItemV(){
         //
         // System menu
         //
+        
         
         if (e.getSource() ==reservbtn) {
             System.out.println("  Newly entered record");
@@ -418,7 +422,8 @@ finally
 
                 checkEnableStatusOfCommands();
             }
-        } else if (action.equals("Close shop")) {
+        } 
+        else if (action.equals("Close shop")) {
             //shop.closeDownSystem(); // save data so can restart
             shop = null;
             outputArea.selectAll();
@@ -456,8 +461,17 @@ finally
 
             }
             else  {
+                  outputArea.selectAll();
+            outputArea.setText("");
         outputArea.selectAll();
         outputArea.setText("");
+         itembtn.setText("add item");
+                    reservbtn.setText("reserve item");
+                    
+                    t1.setText("item type");
+                    t2.setText("item name");
+                    t3.setText(currentShopName.toString());
+                   
        t1.setVisible(true);
        t2.setVisible(true);
        t3.setVisible(true);
@@ -472,6 +486,8 @@ finally
 
             } else //         System.out.println("y)es I am going");
             {
+                 outputArea.selectAll();
+            outputArea.setText("");
                 shop.printItemDetails();
             }
         } //
@@ -490,7 +506,8 @@ finally
 
                 else
                 {
-                
+                 outputArea.selectAll();
+            outputArea.setText("");
                  String inputMessage="enter  the id of the customer that you want to print";
                 String cusid = JOptionPane.showInputDialog(inputMessage);
            int check=0;
@@ -516,6 +533,8 @@ finally
 
             }
             else  {
+                 outputArea.selectAll();
+            outputArea.setText("");
                 System.out.println(currentShopName);
                 String f = currentShopName + "customerRecord.txt";
                  shop.readCustomerData(f);}
@@ -526,7 +545,9 @@ finally
                 JOptionPane.showMessageDialog(null, "Select a shop first");
 
             } else {
-                            String f = currentShopName + "customerRecord.txt"; 
+ outputArea.selectAll();
+            outputArea.setText("");
+                String f = currentShopName + "customerRecord.txt"; 
                           shop.loadData(f);
                 JOptionPane.showMessageDialog(null, "Customers LOADED!");
             }
@@ -536,7 +557,8 @@ finally
         //
         else if (action.equals("Make reservation...")) {
          //   errorPrintln("\nAction \"" + action + "\" not fully implemented");
-       
+        outputArea.selectAll();
+            outputArea.setText("");
         addItemV();
         t1.setText("Customer ID");
         t2.setText("Item Id");
@@ -550,13 +572,30 @@ finally
         
         
         } 
+         else if(action.equals("Make Vehicle reservation...")){
+         addItemV();
+        t1.setText("Customer ID");
+        t2.setText("VEHICLE");
+         t3.setText("reserving days");
+        t3.enable();
+       
+        t1.setVisible(true);
+        t2.setVisible(true);
+        t3.setVisible(true);
+        t4.setVisible(true);
+        reservbtn.setVisible(true);
         
+        
+        }
+       
         else if (action.equals("Print all shop item")) {
               if (currentShopName == "None Loaded") {
                 JOptionPane.showMessageDialog(null, "Select a shop first");
 
             } else 
-            {            
+            {        
+                 outputArea.selectAll();
+            outputArea.setText("");
                 String f=currentShopName+"itemsRecord.txt";
                 System.out.println("file : "+f);
  Items i=new Items();
@@ -575,7 +614,8 @@ finally
             } else 
             {           // shop.printAllItems();
 
-            
+             outputArea.selectAll();
+            outputArea.setText("");
         String f=currentShopName+"reservationShopItemRecord.txt";
         reserve=new ShopItemReservation();
         reserve.readReservationData(f);
@@ -639,6 +679,8 @@ finally
             menuItemSetEnabled(false, customerMenu, "Print all customers");
             menuItemSetEnabled(false, reservationMenu, "Make reservation...");
             menuItemSetEnabled(false, reservationMenu, "Print all reservations");
+            menuItemSetEnabled(false, reservationMenu, "Make vehicle reservations...");
+            
         }
     }
 
