@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Random;
@@ -239,10 +240,9 @@ public void addItemV(){
         // shop item menu
         shopItemMenu = setupMenu(menuBar, "Shop item", 'I');
         setupMenuItem(shopItemMenu, "Print shop item...", "Display shop item with given code", 'V', true);
-        setupMenuItem(shopItemMenu, "Print all shop items", "Display all shop items", 'D', true);
+        setupMenuItem(shopItemMenu, "Print all shop item", "Print all shop item", 'D', true);
         setupMenuItem(shopItemMenu, "add item", "add item", 'D', true);
 
-        setupMenuItem(shopItemMenu, "print all items", "print all items", 'D', true);
         setupMenuItem(shopItemMenu, "print all reservations", "print all reservations", 'D', true);
         
         // customer menu
@@ -254,7 +254,6 @@ public void addItemV(){
         // reservation menu
         reservationMenu = setupMenu(menuBar, "Reservation", 'R');
         setupMenuItem(reservationMenu, "Make reservation...", "Make a reservation of a shop item for a customer", 'M', true);
-        setupMenuItem(reservationMenu, "Print all reservations", "Display all reservations in the model", 'D', true);
 
         // help menu
         helpMenu = setupMenu(menuBar, "Help", 'H');
@@ -289,20 +288,22 @@ public void addItemV(){
     addItemV();
     reserve=new ShopItemReservation();
         BufferedWriter out = null;
-try  
+
+        try  
 {
    
     FileWriter fstream = new FileWriter(currentShopName+"reservationShopItemRecord.txt", true); //true tells to append data.
     out = new BufferedWriter(fstream);
-    Random rn = new Random();
-int n = 100 -2 + 1;
-int i = rn.nextInt() % n;
-int randomNum =  2 + i;
+   
 DateUtil d=new DateUtil();
 Date ds=new Date();
-LocalDate localDate = LocalDate.now();
-String Localdate=d.convertDateToShortString(ds);
-    out.write(randomNum+","+t1.getText()+","+t2.getText()+","+t3.getText()+localDate.toString()+"\n");
+//LocalDate localDate = LocalDate.now();
+        Random rand = new Random();
+
+String RandomNum=reserve.getReservationNo();
+        int randomNum=(rand.nextInt(7)+1) * 1000000; 
+
+out.write(randomNum+","+t1.getText()+","+t2.getText()+","+t3.getText()+","+d.convertDateToShortString(ds)+"\n");
    
     
 }
@@ -341,10 +342,10 @@ try
     FileWriter fstream = new FileWriter(currentShopName+"itemsRecord.txt", true); //true tells to append data.
     out = new BufferedWriter(fstream);
     Random rn = new Random();
-int n = 100 -2 + 1;
-int i = rn.nextInt() % n;
-int randomNum =  2 + i;
+  Random rand = new Random();
 
+String RandomNum=reserve.getReservationNo();
+        int randomNum=(rand.nextInt(7)+1) * 1000000; 
     out.write(String.valueOf(randomNum)+","+t1.getText()+","+t2.getText()+","+t3.getText()+"\n");
    
     
@@ -447,11 +448,14 @@ finally
         } //
         // Shop item menu
         //
-        else if (action.equals("Print shop item...")) {
-            // shop.printItem("1"); 
-
-        } 
+    
+        
         else if (action.equals("add item")){
+             if (currentShopName == "None Loaded") {
+                JOptionPane.showMessageDialog(null, "Select a shop first");
+
+            }
+            else  {
         outputArea.selectAll();
         outputArea.setText("");
        t1.setVisible(true);
@@ -459,7 +463,7 @@ finally
        t3.setVisible(true);
        t3.setText(currentShopName);
        itembtn.setVisible(true);
-        }
+        }}
         
         
         else if (action.equals("Print all shop items")) {
@@ -545,29 +549,45 @@ finally
         reservbtn.setVisible(true);
         
         
-        } else if (action.equals("Print all reservations")) {
-            shop.printAllReservations();
-            //    errorPrintln("\nAction \"" + action + "\" not fully implemented");
-        } //
-        // Help menu
-        //
+        } 
+        
+        else if (action.equals("Print all shop item")) {
+              if (currentShopName == "None Loaded") {
+                JOptionPane.showMessageDialog(null, "Select a shop first");
+
+            } else 
+            {            
+                String f=currentShopName+"itemsRecord.txt";
+                System.out.println("file : "+f);
+ Items i=new Items();
+ i.readItems(f);
+            }
+        }
+   
         else if (action.equals("Help contents")) {
             errorPrintln("\nAction \"" + action + "\" not fully implemented");
         } 
         
-        else if(action.equals("print all items")){
-        String f=currentShopName+"itemsRecord.txt";
+        else if(action.equals("print all reservations")){
+            if (currentShopName == "None Loaded") {
+                JOptionPane.showMessageDialog(null, "Select a shop first");
+
+            } else 
+            {           // shop.printAllItems();
+
+            
+        String f=currentShopName+"reservationShopItemRecord.txt";
         reserve=new ShopItemReservation();
         reserve.readReservationData(f);
-                
+            }    
         }
         else if (action.equals("About")) {
             String version = "Version: 4.11 (released 15 April, 2010)";
             JOptionPane.showMessageDialog(this, version, "About the shop",
                     JOptionPane.INFORMATION_MESSAGE);
         } else {
-            errorPrintln("\n*** Warning");
-            errorPrintln("*** Action \"" + e.getActionCommand() + "\" not recognised");
+         //   errorPrintln("\n*** Warning");
+          //  errorPrintln("*** Action \"" + e.getActionCommand() + "\" not recognised");
     addItemV();
 
         }

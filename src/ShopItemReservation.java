@@ -26,14 +26,14 @@ public class ShopItemReservation
 	private String reservationNo;
 	private String itemID;
 	private String customerID;
-	//private Date startDate ;
+	private Date startDate ;
 	private int noOfDays;
 	
 	public ShopItemReservation(String itemID, String customerID, String startDate, int noOfDays)
 	{
 		this.itemID = itemID;
 		this.customerID = customerID;
-		//this.startDate = DateUtil.convertStringToDate(startDate);
+		this.startDate = DateUtil.convertStringToDate(startDate);
 		this.noOfDays = noOfDays;
 	}
 	
@@ -96,7 +96,7 @@ public class ShopItemReservation
     public void printItemReservations() 
     {
        System.out.println("-----" + "\n" + "Reservation No: " + " " + getReservationNo() + "\n " + " \n" + "Item ID : " + " " + getItemID()
-        + "\n" + "customer ID : " + " " + getCustomerID()+ "\n" + "No of Days : " + " " + getNoOfDays());
+        + "\n" + "customer ID : " + " " + getCustomerID()+ "\n" + "No of Days : " + " " + getNoOfDays()+"\n"+"start Date : " + " " + getStartDate());
     } 
 	
 
@@ -137,9 +137,10 @@ public class ShopItemReservation
 		reservationNo = toolScan.next();
         itemID = toolScan.next();
         customerID = toolScan.next();
-       // startDate = DateUtil.convertStringToDate(toolScan.next());
-       // noOfDays = toolScan.nextInt();
-    }
+       noOfDays = toolScan.nextInt();
+   
+        startDate = DateUtil.convertStringToDate(toolScan.next());
+       }
     
     public void printDetails(HashMap<String, ShopItemReservation> itemReservationMap) 
     {
@@ -205,12 +206,11 @@ public class ShopItemReservation
 
 	public Date getStartDate() 
 	{
-            Date d=new Date();
-		return d;
+		return startDate;
 	}
 	
 	public void setStartDate(Date startDate) 
 	{
-	//	this.startDate = startDate;
+		this.startDate = startDate;
 	}
 }

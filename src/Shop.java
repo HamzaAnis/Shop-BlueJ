@@ -79,10 +79,8 @@ public class Shop
    {
     if(itemReservationMap.isEmpty())
     {
-        System.out.println("HELLO");
         return;   
     }
-            System.out.println("HELLO1");
 
      Set set = itemReservationMap.entrySet();
      Iterator iterator = set.iterator();
