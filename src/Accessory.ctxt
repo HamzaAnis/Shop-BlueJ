@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Accessory
+comment0.text=\r\n\ Accessory\ is\ a\ subclass\ of\ ShopItem\ on\ the\ second\ level\ of\r\n\ the\ hierarchy.\ Accessory\ is\ the\ SuperClass\ of\ Perishable\r\n\ and\ Workwear.\ This\ class\ is\ used\ to\ avoid\ duplication\r\n\ between\ Perishable\ and\ Workwear.\r\n\r\n\ @author(Hassan\ Ali)\r\n\ @group(4)\r\n
+comment1.params=
+comment1.target=Accessory()
+comment1.text=\r\n\ An\ empty\ Accessory\ constructor,\ called\ upon\ in\ order\r\n\ to\ help\ extract\ data\ into\ it.\r\n
+comment2.params=accessoryScan
+comment2.target=void\ extractData(java.util.Scanner)
+comment2.text=\r\n\ This\ is\ called\ upon\ by\ readData()\ method\ within\ Class\r\n\ Shop\ and\ passed\ a\ scanner\ object.Designed\ to\ read\ text\ data,\r\n\ relevant\ to\ Accessory\ data\ from\ a\ given\ file.\r\n
+comment3.params=
+comment3.target=void\ printDetails()
+comment3.text=\r\n\ printDetails()\ to\ be\ called\ from\ Perishable\ and\r\n\ WorkWear\ subclasses.\ This\ method\ calls\ its\ own\ accessor\r\n\ methods\ and\ prints\ them\ to\ the\ terminal.\r\n
+comment4.params=position
+comment4.target=void\ setPosition(java.lang.String)
+comment4.text=\r\n\ Accessor\ and\ Mutator\ methods\ designed\ to\ be\ \r\n\ called\ upon\ by\ Perishable\ and\ Workwear\ subclass\r\n\ methods\r\n
+comment5.params=
+comment5.target=java.lang.String\ getPosition()
+numComments=6

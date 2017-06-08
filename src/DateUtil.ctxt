@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=date
+comment0.target=java.lang.String\ convertDateToLongString(java.util.Date)
+comment0.text=\r\n\ Converts\ a\ Date\ object\ to\ a\ corresponding\ String\ in\r\n\ the\ long\ date\ pattern\ style\ "Friday,\ 25\ January\ 2016".\r\n\r\n\ @param\ \ \ \ \ date\ \ a\ Date\ object\r\n\r\n\ @return\ \ \ \ a\ String,\ containing\ a\ long\ date\ pattern\r\n
+comment1.params=date
+comment1.target=java.lang.String\ convertDateToShortString(java.util.Date)
+comment1.text=\r\n\ Converts\ a\ Date\ object\ to\ a\ corresponding\ String\ in\r\n\ the\ short\ date\ pattern\ style\ "25-03-2016".\r\n\r\n\ @param\ \ \ \ \ date\ \ a\ Date\ object\r\n\r\n\ @return\ \ \ \ a\ String,\ containing\ a\ short\ date\ pattern\r\n
+comment2.params=dateString
+comment2.target=java.util.Date\ convertStringToDate(java.lang.String)
+comment2.text=\r\n\ Converts\ a\ string\ in\ the\ short\ date\ pattern\ style\ "25-03-2016"\r\n\ to\ a\ corresponding\ Date\ object.\r\n\r\n\ Any\ leading\ or\ trailing\ spaces\ are\ first\ removed\ from\ the\ date\ string.\r\n\ The\ String\ parameter\ that\ represent\ a\ date\ as\ a\ string\ must\ be\ in\ the\r\n\ format\ dd-mm-yyy\ (e.g.\ 25-03-2016\ or\ 25-3-2016)\ where\ dd\ represents\r\n\ one\ or\ two\ digits\ representing\ the\ day\ in\ the\ month,\ similarly\ for\r\n\ mm\ representing\ the\ month\ in\ the\ year\ and\ yyyy\ represents\ the\ four\r\n\ digits\ for\ the\ year.\r\n\r\n\ A\ RuntimeException\ is\ thrown\ if\ the\ date\ string\ is\ not\ recognised\ as\r\n\ a\ valid\ date.\ Such\ exceptions\ do\ not\ need\ to\ be\ caught\ or\ thrown\ as\ \r\n\ they\ are\ unchecked\ exceptions,\ but\ can\ be\ caught\ if\ necessary.\r\n\r\n\ @param\ \ \ \ \ dateString\ \ a\ Date\ object\r\n\r\n\ @return\ \ \ \ the\ Date\ object\r\n
+comment3.params=startDate\ endDate
+comment3.target=int\ daysBetween(java.util.Date,\ java.util.Date)
+comment3.text=\r\n\ Calculates\ the\ number\ of\ days\ between\ two\ given\ dates,\ startDate\ and\ endDate.\r\n\r\n\ If\ startDate\ is\ after\ endDate\ then\ the\ number\ of\ days\ returned\ will\ be\ negative.\r\n\r\n\ @param\ \ \ \ \ startDate\ \ \ a\ Date\ object\r\n\ @param\ \ \ \ \ endDate\ \ \ \ \ a\ Date\ object\r\n\r\n\ @return\ \ \ \ an\ int,\ number\ of\ days\ between\ the\ dates\r\n
+comment4.params=date\ noOfDays
+comment4.target=java.util.Date\ incrementDate(java.util.Date,\ int)
+comment4.text=\r\n\ Given\ date,\ a\ Date\ object,\ and\ noOfDays,\ an\ int,\ the\ method\ returns\r\n\ a\ Date\ object\ corresponding\ to\ noOfDays\ later\ than\ date.\r\n\r\n\ If\ noOfDays\ is\ negative,\ the\ resulting\ Date\ object\ will\ be\ before\ date.\r\n\r\n\ @param\ \ \ \ \ date\ \ \ \ \ \ a\ Date\ object\r\n\ @param\ \ \ \ \ noOfDays\ \ an\ int\r\n\r\n\ @return\ \ \ \ a\ Date\r\n
+comment5.params=year
+comment5.target=boolean\ isLeapYear(int)
+comment5.text=\r\n\ Given\ year,\ an\ int,\ the\ method\ checks\ to\ see\ if\ the\ year\r\n\ is\ a\ leap\ year.\r\n\r\n\ @param\ \ \ \ \ year,\ \ an\ int\r\n\r\n\ @return\ \ \ \ a\ boolean,\ true\ only\ if\ the\ year\ is\ a\ leap\ year.\r\n
+comment6.params=dateString
+comment6.target=boolean\ isValidDateString(java.lang.String)
+comment6.text=\r\n\ Given\ dateString,\ a\ String,\ the\ method\ checks\ to\ see\ if\ string\r\n\ corresponds\ to\ a\ valid\ shortDatePattern.\ \r\n\r\n\ @param\ \ \ \ \ dateString,\ a\ String\r\n\r\n\ @return\ \ \ \ a\ boolean,\ true\ only\ if\ the\ dateString\ is\ a\ valid\ pattern\r\n
+comment7.params=date
+comment7.target=java.util.Date\ nextDate(java.util.Date)
+comment7.text=\r\n\ Given\ date,\ a\ Date\ object,\ the\ method\ returns\r\n\ a\ Date\ object\ corresponding\ to\ the\ next\ day.\r\n\r\n\ @param\ \ \ \ \ noOfDays\ \ an\ int\r\n\r\n\ @return\ \ \ \ a\ Date\r\n
+numComments=8

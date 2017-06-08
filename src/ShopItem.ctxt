@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=ShopItem
+comment0.text=\r\n\ ShopItem\ class,\ contains\ generic\ fields,\ shared\ by\ both\r\n\ Tool\ and\ Accessory\ class\ thus\ used\ to\ avoid\ duplication.\r\n\ As\ this\ is\ an\ abstract\ class,\ it\ is\ only\ instantiated\ by\r\n\ subclass\ Tool\ and\ Accessories.\r\n\ \r\n\ @author\ \ \r\n\ @group(4)\r\n
+comment1.params=
+comment1.target=ShopItem()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ ShopItem,\ \r\n\ initialising\ cost\ variable\ to\ value\ of\ 0.\r\n
+comment2.params=toolScan
+comment2.target=void\ extractTokens(java.util.Scanner)
+comment2.text=\r\n\ This\ is\ called\ upon\ by\ readData()\ method\ within\ Class\r\n\ Shop\ and\ passed\ a\ scanner\ object.Designed\ to\ read\ text\ data,\r\n\ relevant\ to\ Accessory\ data\ from\ a\ given\ file.\r\n
+comment3.params=
+comment3.target=void\ printDetails()
+comment3.text=\r\n\ \ Calls\ accessor\ methods\ within\ this\ ShopItem\ class\r\n\ \ and\ prints\ to\ terminal.\ This\ method\ is\ called\ by\r\n\ \ the\ printDetails()\ of\ Tool\ and/or\ Accessory.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getItemName()
+comment4.text=\r\n\ Accessor\ and\ Mutator\ methods\ designed\ to\ be\ \r\n\ called\ upon\ by\ either\ Tool\ or\ Accessory\ \r\n\ methods\r\n
+comment5.params=itemName
+comment5.target=void\ setItemName(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getItemCode()
+comment7.params=itemCode
+comment7.target=void\ setItemCode(java.lang.String)
+comment8.params=
+comment8.target=double\ getCost()
+comment9.params=cost
+comment9.target=void\ setCost(double)
+numComments=10

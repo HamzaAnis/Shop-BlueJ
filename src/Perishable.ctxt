@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Perishable()
+comment0.text=\r\n\ A\ no\ parameter\ constructor,\ initilising\ variables\r\n\ isIrritant,\ useByDate\ and\ volume.\r\n
+comment1.params=perishScan
+comment1.target=void\ extractTokens(java.util.Scanner)
+comment1.text=\r\n\ This\ is\ called\ upon\ by\ readData()\ method\ within\ Class\r\n\ Shop\ and\ passed\ a\ scanner\ object.Designed\ to\ read\ text\ data,\r\n\ relevant\ to\ Perishable\ data\ from\ a\ given\ file.\r\n
+comment2.params=
+comment2.target=void\ printDetails()
+comment2.text=\r\n\ Calls\ the\ printDetails()\ from\ the\ Accessory\ SuperClass\ to\ print\ \r\n\ out\ common\ variables.\ This\ method\ also\ calls\ its\ own\ accessor\r\n\ methods\ and\ prints\ them\ to\ the\ terminal.\r\n
+comment3.params=
+comment3.target=int\ getVolume()
+comment3.text=\r\n\ Accessor\ and\ Mutator\ methods,\ designed\ to\ be\ called\ upon.\r\n\ Used\ by\ printDetails()\ method\ above.\ Mutator\ methods\r\n\ are\ used\ by\ extractTokens\ ()\ method\ by\ the\ scanner\ object.\r\n
+comment4.params=v
+comment4.target=void\ setVolume(int)
+comment5.params=
+comment5.target=boolean\ isIrritant()
+comment6.params=i
+comment6.target=void\ setIrritant(boolean)
+comment7.params=
+comment7.target=java.lang.String\ getUseByDate()
+comment8.params=date
+comment8.target=void\ setUseByDate(java.lang.String)
+numComments=9

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=toolName\ itemCode\ cost\ weight\ timesBorrowed\ onLoan\ rechargeable\ power
+comment0.target=ElectricTool(java.lang.String,\ java.lang.String,\ double,\ float,\ int,\ boolean,\ boolean,\ java.lang.String)
+comment1.params=
+comment1.target=ElectricTool()
+comment1.text=\r\n\ An\ empty\ ElectricTool\ constructor,\ called\ upon\ in\ order\r\n\ to\ help\ extract\ data\ into\ an\ ElectricTool\ object.\r\n
+comment2.params=elecScan
+comment2.target=void\ extractTokens(java.util.Scanner)
+comment2.text=\r\n\ This\ is\ called\ upon\ by\ readData()\ method\ within\ SuperClass\ \r\n\ Shop\ and\ passed\ a\ scanner\ object.Designed\ to\ read\ text\ data,\ \r\n\ relevant\ to\ ElectricTool\ data\ from\ a\ given\ file.\r\n
+comment3.params=
+comment3.target=void\ printDetails()
+comment3.text=\r\n\ Calls\ the\ printDetails()\ from\ the\ Tool\ SuperClass\ to\ print\ \r\n\ out\ common\ variables.\ This\ method\ also\ calls\ its\ own\ accessor\r\n\ methods\ and\ prints\ them\ to\ the\ terminal.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getPower()
+comment4.text=\r\n\ Accessor\ and\ Mutator\ methods,\ designed\ to\ be\ called\ upon.\r\n\ Used\ by\ printDetails()\ method\ above.\ Mutator\ methods\r\n\ are\ used\ by\ extractTokens\ method\ by\ the\ scanner\ object.\r\n
+comment5.params=power
+comment5.target=void\ setPower(java.lang.String)
+comment6.params=
+comment6.target=boolean\ isRechargeable()
+comment7.params=recharegeable
+comment7.target=void\ setRechargeable(boolean)
+numComments=8

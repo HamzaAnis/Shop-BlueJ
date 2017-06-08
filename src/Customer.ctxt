@@ -1,0 +1,43 @@
+#BlueJ class context
+comment0.target=Customer
+comment0.text=\r\n\ Represents\ customer\r\n\ generateRandomNumber()\r\n\ storeCustomer()\ method\ from\ Shop\ Class,\ calls\ generateCustomerID()\r\n\ from\ this\ Class,\ which\ then\ calls\ this\ method\ and\ is\ passed\ a\ value\r\n\ of\ "6"\ as\ an\ int.\ If\ number\ \=\=\ 6,\ min\ is\ given\ the\ value\ of\ 9999\r\n\ and\ max\ is\ given\ value\ off\ 1000.\r\n\ \r\n\ generateCustomerID()\r\n\ Designed\ to\ be\ called\ by\ Shop\ Class\ storeCustomer()\ method,\ this\r\n\ method\ is\ passed\ a\ prefx\ of\ "AB-"\ as\ a\ String\ and\ the\ number\ "1"\ as\ \r\n\ an\ int.\ The\ retuned\ value\ from\ generateRandomNumber(1)\ is\ then\ \r\n\ combined\ with\ the\ prefix\ number\ and\ stored\ as\ a\ CustomerID.\r\n
+comment1.params=firstName\ surName\ otherInitials\ title
+comment1.target=Customer(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment10.params=
+comment10.target=java.lang.String\ getFirstName()
+comment11.params=firstName
+comment11.target=void\ setFirstName(java.lang.String)
+comment12.params=
+comment12.target=java.lang.String\ getTitle()
+comment13.params=title
+comment13.target=void\ setTitle(java.lang.String)
+comment14.params=
+comment14.target=java.lang.String\ getOtherInitials()
+comment15.params=otherInitials
+comment15.target=void\ setOtherInitials(java.lang.String)
+comment16.params=customerScan
+comment16.target=void\ extractTokens(java.util.Scanner)
+comment17.params=
+comment17.target=void\ readData()
+comment2.params=
+comment2.target=Customer()
+comment2.text=\r\n\ No\ parameter\ constructor\ called\ upon\ by\ \r\n\ readCustomerData()\ method\ in\ the\ Shop\ Class\r\n
+comment3.params=
+comment3.target=void\ printDetails()
+comment3.text=\r\n\ Displays\ the\ values\ of\ all\ fields\ within\r\n\ this\ class\ in\ an\ understandable\ format\r\n
+comment4.params=number
+comment4.target=int\ generateRandomNumber(int)
+comment4.text=\r\n\ storeCustomer()\ method\ from\ Shop\ Class,\ calls\ generateCustomerID()\r\n\ from\ this\ Class,\ which\ then\ calls\ this\ method\ and\ is\ passed\ a\ value\r\n\ of\ "6"\ as\ an\ int.\ If\ number\ \=\=\ 6,\ min\ is\ given\ the\ value\ of\ 9999\r\n\ and\ max\ is\ given\ value\ off\ 1000.\r\n
+comment5.params=prefix\ numb
+comment5.target=void\ generateCustomerID(java.lang.String,\ int)
+comment5.text=\r\n\ Designed\ to\ be\ called\ by\ Shop\ Class\ storeCustomer()\ method,\ this\r\n\ method\ is\ passed\ a\ prefx\ of\ "AB-"\ as\ a\ String\ and\ the\ number\ "1"\ as\ \r\n\ an\ int.\ The\ retuned\ value\ from\ generateRandomNumber(1)\ is\ then\ \r\n\ combined\ with\ the\ prefix\ number\ and\ stored\ as\ a\ CustomerID.\r\n
+comment6.params=
+comment6.target=java.lang.String\ getCustomerID()
+comment6.text=\r\n\ Accessor\ and\ Mutator\ Methods\ for\ all\ fields\ within\r\n\ Customer\ Class.\r\n
+comment7.params=customerID
+comment7.target=void\ setCustomerID(java.lang.String)
+comment8.params=
+comment8.target=java.lang.String\ getSurName()
+comment9.params=surName
+comment9.target=void\ setSurName(java.lang.String)
+numComments=18

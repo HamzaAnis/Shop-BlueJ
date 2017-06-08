@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=toolName\ itemCode\ cost\ weight\ timesBorrowed\ onLoan\ sharpenable
+comment0.target=HandTool(java.lang.String,\ java.lang.String,\ double,\ float,\ int,\ boolean,\ boolean)
+comment1.params=
+comment1.target=HandTool()
+comment1.text=\r\n\ An\ empty\ HandTool\ constructor,\ called\ upon\ by\ the\ Shop\r\n\ superclass\ in\ order\ to\ help\ extract\ data\ into\ \r\n\ an\ ElectricTool\ object.\r\n
+comment2.params=handScan
+comment2.target=void\ extractTokens(java.util.Scanner)
+comment3.params=
+comment3.target=void\ printDetails()
+comment3.text=\r\n\ Calls\ the\ printDetails()\ from\ the\ Tool\ SuperClass\ to\ print\ \r\n\ out\ common\ variables.\ This\ method\ also\ calls\ its\ own\ accessor\r\n\ methods\ and\ prints\ them\ to\ the\ terminal.\r\n
+comment4.params=sharpenable
+comment4.target=void\ setSharpenable(boolean)
+comment4.text=\r\n\ Accessor\ and\ Mutator\ methods,\ designed\ to\ be\ called\ upon.\r\n\ Used\ by\ printDetails()\ method\ above.\ Mutator\ methods\r\n\ are\ used\ by\ extractTokens\ ()\ method\ by\ the\ scanner\ object.\r\n
+comment5.params=
+comment5.target=boolean\ isSharpenable()
+numComments=6

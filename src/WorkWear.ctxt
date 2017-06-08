@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=WorkWear
+comment0.text=\r\n\ WorkWear\ is\ a\ subclass\ of\ Accessory,\ it\ represents\r\n\ an\ WorkWear\ items\ such\ as\ an\ overcoat\ hence\ relevant\ fields.\r\n\ The\ constructor\ calls\ its\ SuperClass\ Accessory\ and\ ShopItem.\ \r\n\r\n\ @author\ (Hassan\ Ali)\r\n\ @group\ (4)\r\n
+comment1.params=
+comment1.target=WorkWear()
+comment1.text=\r\n\ An\ empty\ Workwear\ constructor,\ called\ upon\ in\ order\r\n\ to\ help\ extract\ data\ into\ an\ WorkWear\ object.\r\n
+comment2.params=workScan
+comment2.target=void\ extractTokens(java.util.Scanner)
+comment2.text=\r\n\ This\ is\ called\ upon\ by\ readData()\ method\ within\ Class\r\n\ Shop\ and\ passed\ a\ scanner\ object.Designed\ to\ read\ text\ data,\r\n\ relevant\ to\ WorkWear\ data\ from\ a\ given\ file.\r\n
+comment3.params=
+comment3.target=void\ printDetails()
+comment3.text=\r\n\ Calls\ the\ printDetails()\ from\ the\ Accessory\ SuperClass\ to\ print\ \r\n\ out\ common\ variables.\ This\ method\ also\ calls\ its\ own\ accessor\r\n\ methods\ and\ prints\ them\ to\ the\ terminal.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getManufacturingStandard()
+comment4.text=\r\n\ Accessor\ and\ Mutator\ methods,\ designed\ to\ be\ called\ upon.\r\n\ Used\ by\ printDetails()\ method\ above.\ Mutator\ methods\r\n\ are\ used\ by\ extractTokens\ ()\ method\ by\ the\ scanner\ object.\r\n
+comment5.params=manufacturingStandard
+comment5.target=void\ setManufacturingStandard(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getSize()
+comment7.params=size
+comment7.target=void\ setSize(java.lang.String)
+comment8.params=
+comment8.target=java.lang.String\ getColor()
+comment9.params=colour
+comment9.target=void\ setColor(java.lang.String)
+numComments=10

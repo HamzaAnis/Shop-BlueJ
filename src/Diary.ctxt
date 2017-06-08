@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Diary
+comment0.text=\r\n\ A\ class\ Diary\ that\ represents\ a\ "diary"\ of\ shop\ item\ reservations.\r\n\ \r\n\ The\ diary\ is\ structured\ as\ a\ Map\ of\ entries\ in\ which\ each\ entry\ corresponds\ \r\n\ to\ a\ specific\ day.\ \ As\ the\ map\ is\ not\ accessed\ in\ a\ sequential\ fashion,\ it\r\n\ doesn't\ matter\ whether\ the\ actual\ map\ class\ is\ a\ TreeMap\ or\ a\ HashMap.\r\n\r\n\ \r\n\ \r\n
+comment1.params=
+comment1.target=Diary()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Diary\r\n
+comment2.params=shopItemReservation
+comment2.target=void\ addItemReservation(ShopItemReservation)
+comment2.text=\r\n\ Method\ for\ adding\ a\ reservation\ to\ the\ diary.\ \r\n\r\n\ @parameter\ \ \ \ \ shopItemReservation,\ of\ type\ ShopItemReservation\ \r\n
+comment3.params=startDate\ endDate
+comment3.target=void\ printEntries(java.util.Date,\ java.util.Date)
+comment3.text=\r\n\ Method\ for\ displaying\ the\ reservations\ between\ specified\ dates.\ \r\n\r\n\ @parameter\ \ \ \ \ startDate,\ of\ type\ Date\r\n\ @parameter\ \ \ \ \ endDate,\ of\ type\ Date\r\n
+comment4.params=shopItemReservation
+comment4.target=void\ deleteItemReservation(ShopItemReservation)
+comment4.text=\r\n\ Method\ for\ deleting\ a\ reservation\ from\ the\ diary.\ \r\n\r\n\ @parameter\ \ \ \ \ shopItemReservation,\ of\ type\ ShopItemReservation\ \r\n
+comment5.params=date
+comment5.target=ShopItemReservation[]\ getItemReservations(java.util.Date)
+comment5.text=\r\n\ Accessor\ method\ for\ returning\ all\ reservations\ that\ have\ entries\ \r\n\ in\ the\ diary\ for\ a\ particular\ date.\ \r\n\r\n\ @parameter\ \ \ \ \ date,\ of\ type\ Date\ \r\n\ @return\ \ \ \ \ \ \ \ an\ array\ of\ reservations,\ or\ null\ if\ no\ entry\ for\ that\ date\r\n
+numComments=6
